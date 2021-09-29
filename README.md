@@ -52,3 +52,7 @@ This is mostly for convenience and can be fine-tuned as you like it. The source 
 ## QR code verifier
 
 The file `qrserver.py` contains a `flask` to which QR codes can be uploaded from which the contents should be detected. This server can be used by the chatbot.
+
+## Porting this to another chat service
+
+It should be relatively easy to use this framework with other chat services, as only few components really rely on the `discord.js` api. You should however make some (possibly) breaking changes in the source code, as there is currently no real proxy between the game components and the `discord.js` api.
